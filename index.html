@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Angel ❤️</title><style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(270deg,#0f001a,#1a0033,#330033,#660033);
+background-size:800% 800%;
+animation:galaxy 15s ease infinite;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+@keyframes galaxy{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+padding-top:80px;
+}
+
+h1{
+font-size:3em;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff4f81;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#photo{
+display:none;
+margin-top:20px;
+max-width:300px;
+border-radius:20px;
+box-shadow:0 10px 30px black;
+}
+
+#letter{
+display:none;
+margin:20px auto;
+max-width:600px;
+background:rgba(0,0,0,0.6);
+padding:20px;
+border-radius:15px;
+}
+
+#slideshow{
+display:none;
+margin-top:20px;
+}
+
+.slide{
+display:none;
+max-width:300px;
+border-radius:15px;
+}
+
+#kiss{
+display:none;
+font-size:70px;
+margin-top:20px;
+animation:pulse 1s infinite alternate;
+}
+
+#replay{
+display:none;
+}
+
+.heart{
+position:absolute;
+color:#ff6fa5;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+
+@keyframes pulse{
+from{transform:scale(1);}
+to{transform:scale(1.3);}
+}
+
+</style></head><body><div class="container"><h1>Happy Birthday My Angel 🎂❤️</h1><p>
+Aafiyah, today is the day the world was blessed with you.
+You are the most beautiful chapter of my life.
+Every moment with you feels like magic.Forever yours,
+Arnold ❤️
+
+</p><button onclick="startSurprise()">Open Your Birthday Surprise 🎁</button>
+
+<img id="photo" src="PUT-YOUR-IMAGE-LINK"><div id="letter"><h2>💌 A Letter For You</h2><p>
+My dearest Aafiyah,Meeting you changed my life in the most beautiful way.
+Your smile lights up my world and your love makes everything better.
+
+On your birthday I just want you to know something very important…
+
+I will always choose you.
+
+Today.
+Tomorrow.
+Forever.
+
+I love you ❤️
+
+– Arnold
+
+</p><button onclick="showLove()">I Choose You Forever 💍</button>
+
+</div><div id="slideshow"><img class="slide" src="PUT-SECOND-PHOTO">
+<img class="slide" src="PUT-THIRD-PHOTO"></div><div id="kiss">💋💋💋</div><br><button id="replay" onclick="location.reload()">Replay Our Love Story ❤️</button>
+
+<audio id="music" loop>
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio></div><script>
+
+function startSurprise(){
+
+document.getElementById("photo").style.display="block";
+document.getElementById("letter").style.display="block";
+document.getElementById("slideshow").style.display="block";
+
+document.getElementById("music").play();
+
+startSlides();
+
+}
+
+function showLove(){
+
+document.getElementById("kiss").style.display="block";
+document.getElementById("replay").style.display="inline-block";
+
+}
+
+function hearts(){
+
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+20)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(hearts,300);
+
+let slideIndex=0;
+
+function startSlides(){
+
+let slides=document.getElementsByClassName("slide");
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+slideIndex++;
+
+if(slideIndex>slides.length){slideIndex=1;}
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(startSlides,3000);
+
+}
+
+</script></body>
+</html>
